@@ -55,14 +55,13 @@ export default function About() {
                 are both elegant and resilient.
               </p>
               <p>
-                Currently working as a Quality Analyst at Amazon, where I ensure adherence to quality and performance
-                metrics in delivery systems. I bring a meticulous approach to every project, optimizing for performance,
-                scalability, and maintainability.
+              Currently working as a Full Stack Developer at eLitmus, where I lead the development and maintenance of the
+              company’s exam platforms — optimizing for performance, scalability, and maintainability.
               </p>
               <p>
                 I'm passionate about clean code, open-source contribution, and solving complex problems through
                 thoughtful engineering. When I'm not coding, you'll find me exploring new technologies, contributing to
-                the community, or optimizing infrastructure pipelines.
+                the community, or working on some side projects.
               </p>
             </div>
           </div>

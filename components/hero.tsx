@@ -29,8 +29,8 @@ export default function Hero() {
       <div className="absolute inset-0 grid-bg opacity-30 animate-grid" />
 
       {/* Animated Gradient Orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl opacity-20 animate-float" />
-      <div className="absolute bottom-20 right-10 w-72 h-72 bg-accent/20 rounded-full blur-3xl opacity-20 animate-float-delayed" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl opacity-50 animate-float" />
+      <div className="absolute bottom-20 right-10 w-72 h-72 bg-accent/20 rounded-full blur-3xl opacity-50 animate-float-delayed" />
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-secondary/10 rounded-full blur-3xl opacity-10 animate-pulse" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -48,7 +48,7 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p className="text-xl sm:text-2xl text-muted-foreground mb-8 text-balance animate-in fade-in duration-700 delay-200">
-          Rails Developer & DevOps Engineer
+          FullStack Engineer
         </p>
 
         {/* Description */}

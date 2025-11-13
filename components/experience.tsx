@@ -4,29 +4,60 @@ import { useEffect, useRef, useState } from "react"
 
 const experiences = [
   {
-    role: "Quality Analyst",
-    company: "Amazon",
-    period: "Jul 2024 – Present",
+    role: "Product Owner / Product Lead",
+    company: "eLitmus Evaluation Pvt. Ltd.",
+    period: "Oct 2024 – Present",
     description:
-      "Ensuring adherence to quality and performance metrics in delivery systems. Implementing automated testing frameworks and performance monitoring.",
-    highlights: ["Quality Assurance", "Performance Metrics", "System Reliability"],
-  },
-  {
-    role: "Senior Rails Developer",
-    company: "Tech Startup",
-    period: "Jan 2023 – Jun 2024",
-    description:
-      "Led backend development for scalable APIs. Optimized database queries reducing response time by 60%. Implemented CI/CD pipelines.",
-    highlights: ["API Development", "Performance Optimization", "DevOps"],
+      "Leading cross-functional teams to build and maintain assessment platforms, ensuring quality, performance, and timely delivery. Driving system upgrades, vulnerability management, and mentoring developers to maintain high engineering standards.",
+    highlights: [
+      "Leadership",
+      "Product Management",
+      "Team Mentorship",
+      "Project Delivery",
+      "System Architecture",
+      "Performance Monitoring",
+      "Vulnerability Management",
+      "Stakeholder Communication"
+    ],
   },
   {
     role: "Full Stack Developer",
-    company: "Digital Agency",
-    period: "Jun 2021 – Dec 2022",
+    company: "eLitmus Evaluation Pvt. Ltd.",
+    period: "Sep 2023 – Present",
     description:
-      "Built and maintained multiple Rails applications. Implemented Docker containerization and Kubernetes orchestration for production deployments.",
-    highlights: ["Full Stack Development", "Docker", "Kubernetes"],
+      "Architected and implemented scalable backend systems, multi-tenant infrastructure, and CI/CD workflows. Improved performance, developer velocity, and enabled revenue growth through innovative system design and automation.",
+    highlights: [
+      "Full Stack Development",
+      "Ruby on Rails",
+      "React",
+      "MySQL",
+      "PostgreSQL",
+      "DevOps",
+      "CI/CD",
+      "System Design",
+      "Performance Optimization",
+      "Active Storage",
+      "ESBuild",
+      "AWS"
+    ]
   },
+  {
+    role: "Full Stack Developer Intern",
+    company: "eLitmus Evaluation Pvt. Ltd.",
+    period: "Mar 2023 – Sep 2023",
+    description:
+      "Contributed to multiple Rails-based applications, focusing on performance optimization and feature development. Improved user onboarding and query efficiency through database and API enhancements.",
+    highlights: [
+      "Ruby on Rails",
+      "JavaScript",
+      "API Development",
+      "Database Optimization",
+      "Docker",
+      "Kubernetes",
+      "Web Performance",
+      "Agile Development"
+    ]
+  }
 ]
 
 export default function Experience() {
