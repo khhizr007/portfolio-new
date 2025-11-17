@@ -187,4 +187,81 @@
   .transition-smooth {
     @apply transition-all duration-300 ease-out;
   }
+
+  /* Prose styling for markdown content */
+  .prose {
+    @apply text-foreground;
+  }
+
+  .prose-invert h1,
+  .prose-invert h2,
+  .prose-invert h3,
+  .prose-invert h4,
+  .prose-invert h5,
+  .prose-invert h6 {
+    @apply text-foreground font-bold mb-4;
+  }
+
+  .prose-invert h1 {
+    @apply text-3xl;
+  }
+
+  .prose-invert h2 {
+    @apply text-2xl mt-6;
+  }
+
+  .prose-invert h3 {
+    @apply text-xl mt-4;
+  }
+
+  .prose-invert p {
+    @apply mb-4 leading-relaxed text-muted-foreground;
+  }
+
+  .prose-invert code {
+    @apply bg-card px-1.5 py-0.5 rounded text-accent text-sm;
+    font-family: "Geist Mono", monospace;
+    letter-spacing: 0.05em;
+  }
+
+  .prose-invert pre {
+    @apply bg-card border border-border rounded-lg p-4 mb-4 overflow-x-auto;
+  }
+
+  .prose-invert pre code {
+    @apply bg-transparent px-0 py-0 text-muted-foreground;
+  }
+
+  .prose-invert a {
+    @apply text-accent hover:text-accent/80 transition-colors;
+  }
+
+  .prose-invert ul,
+  .prose-invert ol {
+    @apply mb-4 ml-6;
+  }
+
+  .prose-invert li {
+    @apply mb-2 text-muted-foreground;
+  }
+
+  .prose-invert blockquote {
+    @apply border-l-2 border-accent pl-4 italic text-muted-foreground mb-4;
+  }
+
+  .prose-invert table {
+    @apply w-full border-collapse mb-4;
+  }
+
+  .prose-invert th {
+    @apply bg-card border border-border px-4 py-2 text-left text-foreground font-bold;
+  }
+
+  .prose-invert td {
+    @apply border border-border px-4 py-2 text-muted-foreground;
+  }
+
+  .prose-invert hr {
+    @apply border-border my-6;
+  }
 }

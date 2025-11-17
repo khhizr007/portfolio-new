@@ -5,80 +5,19 @@ import Link from "next/link"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import { ArrowLeft, Calendar, Clock, Search } from "lucide-react"
+import { blogPosts } from "@/lib/blog-data"
 
-const allBlogs = [
-  {
-    id: 1,
-    title: "Optimizing Rails Applications: Query Performance Deep Dive",
-    excerpt:
-      "Learn advanced techniques for optimizing N+1 queries, implementing smart caching strategies, and reducing database load. We'll explore real-world examples from production systems.",
-    date: "2024-12-15",
-    readTime: "8 min read",
-    category: "Performance",
-    slug: "optimizing-rails-queries",
-    content:
-      "In this comprehensive guide, we explore the most effective strategies for optimizing Rails applications at scale...",
-  },
-  {
-    id: 2,
-    title: "Building Scalable CI/CD Pipelines with GitHub Actions",
-    excerpt:
-      "A comprehensive guide to setting up robust CI/CD pipelines that scale with your infrastructure. From automated testing to blue-green deployments, we cover it all.",
-    date: "2024-12-10",
-    readTime: "12 min read",
-    category: "DevOps",
-    slug: "github-actions-pipelines",
-    content:
-      "GitHub Actions provides a powerful platform for automating your deployment workflows. In this article, we break down...",
-  },
-  {
-    id: 3,
-    title: "Microservices Architecture: When and Why to Migrate",
-    excerpt:
-      "Explore the decision-making process behind microservices migration. We'll discuss trade-offs, implementation patterns, and lessons learned from real deployments.",
-    date: "2024-12-05",
-    readTime: "10 min read",
-    category: "Architecture",
-    slug: "microservices-architecture",
-    content:
-      "Microservices architecture is not a silver bullet, but when implemented correctly, it can provide significant benefits...",
-  },
-  {
-    id: 4,
-    title: "Mastering PostgreSQL for High-Traffic Rails Apps",
-    excerpt:
-      "Deep dive into PostgreSQL optimization techniques, indexing strategies, and query planning for handling millions of transactions daily.",
-    date: "2024-11-28",
-    readTime: "14 min read",
-    category: "Database",
-    slug: "postgresql-optimization",
-    content: "PostgreSQL is a powerful database engine that can handle massive workloads when properly configured...",
-  },
-  {
-    id: 5,
-    title: "Container Security Best Practices for Production",
-    excerpt:
-      "Comprehensive guide on securing containerized applications in production environments. Learn about image scanning, runtime security, and compliance.",
-    date: "2024-11-20",
-    readTime: "11 min read",
-    category: "Security",
-    slug: "container-security",
-    content:
-      "Container security is a critical aspect of modern infrastructure. This article covers best practices and common pitfalls...",
-  },
-  {
-    id: 6,
-    title: "Real-time Data Processing with Rails and Redis",
-    excerpt:
-      "Learn how to implement real-time data processing, WebSocket integration, and pub/sub patterns using Rails and Redis.",
-    date: "2024-11-15",
-    readTime: "9 min read",
-    category: "Architecture",
-    slug: "realtime-rails-redis",
-    content:
-      "Real-time features have become essential in modern web applications. This guide shows you how to implement them effectively...",
-  },
-]
+// Use the same blog data from the shared library
+const allBlogs = blogPosts.map(post => ({
+  id: post.id,
+  title: post.title,
+  excerpt: post.excerpt,
+  date: post.date,
+  readTime: post.readTime,
+  category: post.category,
+  slug: post.slug,
+  content: post.content // We're not using the full content in the list view, but it's available if needed
+}))
 
 export default function BlogPage() {
   const [scrolled, setScrolled] = useState(false)
