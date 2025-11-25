@@ -60,8 +60,10 @@ export default function Hero() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-in fade-in duration-700 delay-400">
           <a
-            href="#blogs"
+            href="https://github.com/khhizr007"
             className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all glow-primary hover:scale-105 duration-300"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             View My Work
           </a>

@@ -87,14 +87,14 @@ export default function Contact() {
               <h3 className="text-xl font-bold mb-4">Connect With Me</h3>
               <div className="space-y-4">
                 <a
-                  href="mailto:khhizr@example.com"
+                  href="mailto:saiyyedkhhizr@gmail.com"
                   className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors group"
                 >
                   <Mail className="group-hover:scale-110 transition-transform" size={20} />
-                  <span>khhizr@example.com</span>
+                  <span>saiyyedkhhizr@gmail.com</span>
                 </a>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/khhizr007"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors group"
@@ -104,7 +104,7 @@ export default function Contact() {
                   <ExternalLink size={16} />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://linkedin.com/in/khhizr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors group"
