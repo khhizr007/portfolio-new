@@ -1,5 +1,5 @@
 # ---- deps ----
-FROM node:20-alpine AS deps
+FROM node:20-bullseye-slim AS deps
 WORKDIR /app
 
 # install small extras and enable corepack/pnpm
@@ -15,7 +15,7 @@ COPY package.json pnpm-lock.yaml* ./
 RUN pnpm install --frozen-lockfile
 
 # ---- builder ----
-FROM node:20-alpine AS builder
+FROM node:20-bullseye-slim AS builder
 WORKDIR /app
 
 # install same small extras and corepack/pnpm here too (so pnpm binary exists)
@@ -30,7 +30,7 @@ COPY --from=deps /app/node_modules ./node_modules
 RUN pnpm build
 
 # ---- runner ----
-FROM node:20-alpine AS runner
+FROM node:20-bullseye-slim AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 
