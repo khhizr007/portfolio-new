@@ -21,10 +21,8 @@ RUN --mount=type=cache,target=/home/node/.pnpm-store \
 # copy full source and build
 COPY . .
 
-# Disable Turbopack for the build by forcing Webpack (avoids WASM turbopack limitation)
-# We pass the --webpack flag to `next build` via pnpm. This is equivalent to
-# "next build --webpack" and prevents the `turbo.createProject` wasm error.
-RUN pnpm build -- --webpack
+# Pass the flag correctly with pnpm so Next uses Webpack instead of Turbopack
+RUN pnpm run build --webpack
 
 # ---- runner ----
 FROM node:20-bookworm-slim AS runner
