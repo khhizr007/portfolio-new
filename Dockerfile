@@ -15,18 +15,22 @@ RUN corepack enable && corepack prepare pnpm@latest --activate
 COPY package.json pnpm-lock.yaml* ./
 
 # install dependencies using a cache for pnpm store (requires BuildKit)
-# the --store path ensures pnpm uses a single store location we cache
 RUN --mount=type=cache,target=/home/node/.pnpm-store \
     pnpm install --frozen-lockfile --store=/home/node/.pnpm-store
 
 # copy full source and build
 COPY . .
-RUN pnpm build
+
+# Disable Turbopack for the build by forcing Webpack (avoids WASM turbopack limitation)
+# We pass the --webpack flag to `next build` via pnpm. This is equivalent to
+# "next build --webpack" and prevents the `turbo.createProject` wasm error.
+RUN pnpm build -- --webpack
 
 # ---- runner ----
 FROM node:20-bookworm-slim AS runner
 WORKDIR /app
 ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
 
 # minimal runtime deps
 RUN apt-get update && \
